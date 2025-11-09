@@ -13,7 +13,7 @@ export default function AboutSection() {
                 </h2>
             </div>
 
-            {/* Principal content */}
+            {/* Main content */}
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
                 <Image
                     src="/assets/real_pic.png"
