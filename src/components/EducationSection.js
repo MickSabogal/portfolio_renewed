@@ -1,28 +1,44 @@
 import Image from "next/image";
 
 export default function EducationSection() {
-    return (
-        <section id="formacao" className="bg-white py-10px scroll-mt-[60px] px-6">
-            <div className="bg-[#21285c] flex justify-center items-center w-[90%] sm:w-[70%] md:w-[40%] mx-auto rounded-[20px] md:rounded-[40px] mb-8">
-                <h2 className="font-['Pixelify_Sans',sans-serif] text-[36px] md:text-[48px] text-[#ffc71e] text-center py-3">
-                    Formação
-                </h2>
-            </div>
+    const education = [
+        {
+            img: "/assets/indoamericana.png",
+            title: "Corporación Educativa Indoamericana",
+            courses: ["Despachante de Aeronaves", "Logística Aeroportuária"],
+            years: "2018 - 2020",
+        },
+        {
+            img: "/assets/mayeutico.png",
+            title: "Instituto Mayeutico",
+            courses: ["Ensino Secundário"],
+            years: "2013 - 2017",
+        },
+    ];
 
-            <div className="flex flex-wrap justify-center gap-10 max-w-6xl mx-auto">
-                <div className="text-center max-w-[300px] font-['Pixelify_Sans',sans-serif] text-black">
-                    <Image src="/assets/indoamericana.png" alt="Indoamericana" className="rounded-lg mx-auto mb-4 w-[180px]" />
-                    <h3>Corporación Educativa Indoamericana</h3>
-                    <p>Despachante de Aeronaves</p>
-                    <p>Logística Aeroportuária</p>
-                    <p>2018-2020</p>
+    return (
+        <section id="formacao" className="formacao">
+            <div className="center-wrap">
+                <div className="formacao_header">
+                    <h2 className="formacao_title">Formação</h2>
                 </div>
 
-                <div className="text-center max-w-[300px] font-['Pixelify_Sans',sans-serif] text-black">
-                    <Image src="/assets/mayeutico.png" alt="Mayeutico" className="rounded-lg mx-auto mb-4 w-[180px]" />
-                    <h3>Instituto Mayeutico</h3>
-                    <p>Ensino Secundário</p>
-                    <p>2013-2017</p>
+                <div className="formacao_content">
+                    {education.map((item) => (
+                        <div key={item.title} className="formacao_item">
+                            <Image
+                                src={item.img}
+                                alt={item.title}
+                                width={390}
+                                height={200}
+                            />
+                            <h3>{item.title}</h3>
+                            {item.courses.map((c, i) => (
+                                <p key={i}>{c}</p>
+                            ))}
+                            <p>{item.years}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

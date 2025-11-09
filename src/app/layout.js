@@ -1,19 +1,22 @@
-import "../app/globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import "./globals.css";
+import { Raleway, Silkscreen, Pixelify_Sans } from "next/font/google";
+
+const raleway = Raleway({ subsets: ["latin"], variable: "--font-raleway" });
+const silkscreen = Silkscreen({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-silkscreen" });
+const pixelify = Pixelify_Sans({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-pixelify" });
 
 export const metadata = {
-  title: "Portafolio | Miguel Sabogal",
-  description: "Portafolio pessoal de Miguel Alejandro Sabogal Guzmán",
+  title: "Portfólio Miguel Sabogal",
+  description: "Portfólio pessoal desenvolvido com Next.js e Tailwind",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt">
-      <body className="flex flex-col min-h-screen bg-[#0f122b] text-gray-100">
-        <Navbar />
-        <main className="grow">{children}</main>
-        <Footer />
+      <body
+        className={`${raleway.variable} ${silkscreen.variable} ${pixelify.variable} bg-[#0f122b] text-white overflow-x-hidden`}
+      >
+        {children}
       </body>
     </html>
   );

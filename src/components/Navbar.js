@@ -1,49 +1,69 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+
     const links = [
-        "INÍCIO", "SOBRE", "HABILIDADES", "PROJETOS",
-        "FORMAÇÃO", "EXPERIÊNCIA", "CONTACTOS",
+        { href: "#intro", label: "Início" },
+        { href: "#about", label: "Sobre Mim" },
+        { href: "#habilidades", label: "Habilidades" },
+        { href: "#projetos", label: "Projetos" },
+        { href: "#formacao", label: "Formação" },
+        { href: "#experiencia", label: "Experiência" },
+        { href: "#contactos", label: "Contactos" },
     ];
 
     return (
-        <header className="sticky top-0 z-1000 bg-[#0f122b] rounded-b-[40px]">
-            {/* Botón móvil */}
-            <button
-                onClick={() => setMenuOpen(!menuOpen)}
-                className="lg:hidden absolute left-4 top-1/2 -translate-y-1/2 z-1001 flex flex-col gap-1.5 p-2"
-                aria-label="Toggle menu"
-            >
-                <span className={`block w-6 h-0.5 bg-[#f6ff00] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                <span className={`block w-6 h-0.5 bg-[#f6ff00] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`block w-6 h-0.5 bg-[#f6ff00] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-            </button>
-
-            {/* Menú desktop */}
-            <nav className="hidden lg:flex justify-center items-center gap-[30px] py-[15px] text-[#f6ff00] font-['silkscreen',sans-serif] text-[10px]">
+        <header className="header-nav">
+            {/* Menú Desktop */}
+            <nav className="hidden lg:flex menu">
                 {links.map((link) => (
-                    <a key={link} href={`#${link.toLowerCase()}`} className="hover:opacity-80 transition">
-                        {link}
-                    </a>
+                    <Link key={link.href} href={link.href}>
+                        {link.label}
+                    </Link>
                 ))}
             </nav>
 
-            {/* Menú móvil */}
+            {/* Menú Móvil */}
+            <div className="flex justify-between items-center px-6 py-4 lg:hidden">
+                <h1 className="text-[#f6ff00] font-silkscreen text-[16px]">
+                    PORTFÓLIO
+                </h1>
+                <button
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    aria-label="Toggle menu"
+                    className="flex flex-col gap-[5px]"
+                >
+                    <span
+                        className={`block w-6 h-0.5 bg-[#f6ff00] transition-all ${menuOpen ? "rotate-45 translate-y-[7px]" : ""
+                            }`}
+                    />
+                    <span
+                        className={`block w-6 h-0.5 bg-[#f6ff00] transition-all ${menuOpen ? "opacity-0" : ""
+                            }`}
+                    />
+                    <span
+                        className={`block w-6 h-0.5 bg-[#f6ff00] transition-all ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""
+                            }`}
+                    />
+                </button>
+            </div>
+
             {menuOpen && (
-                <div className="lg:hidden flex flex-col items-center bg-[#0f122b] py-4">
+                <nav className="flex flex-col items-center bg-[#0f122b] py-4 space-y-4 border-t border-[#f6ff00]/20 lg:hidden">
                     {links.map((link) => (
-                        <a
-                            key={link}
-                            href={`#${link.toLowerCase()}`}
+                        <Link
+                            key={link.href}
+                            href={link.href}
                             onClick={() => setMenuOpen(false)}
-                            className="text-[#f6ff00] py-2 hover:opacity-80 transition"
+                            className="text-[#f6ff00] font-silkscreen text-sm"
                         >
-                            {link}
-                        </a>
+                            {link.label}
+                        </Link>
                     ))}
-                </div>
+                </nav>
             )}
         </header>
     );
