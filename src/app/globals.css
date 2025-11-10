@@ -426,6 +426,18 @@ section {
   align-items: center;
 }
 
+.projetos h3 a {
+  color: #21285c;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.projetos h3 a:hover {
+  color: #ffc71e;
+  text-shadow: 0 0 10px rgba(255, 199, 30, 0.6);
+}
+
+
 /* Flip cards */
 .flip-card {
   background: transparent;

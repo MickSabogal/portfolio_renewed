@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ProjectCard({ img, title, desc }) {
+export default function ProjectCard({ img, title, desc, url }) {
     return (
         <div className="projeto">
             <div className="flip-card">
@@ -19,7 +19,16 @@ export default function ProjectCard({ img, title, desc }) {
                     </div>
                 </div>
             </div>
-            <h3>{title}</h3>
+
+            <h3>
+                {url ? (
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                        {title}
+                    </a>
+                ) : (
+                    title
+                )}
+            </h3>
         </div>
     );
 }
