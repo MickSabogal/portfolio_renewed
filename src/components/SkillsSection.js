@@ -9,7 +9,7 @@ export default function SkillsSection() {
         { name: "React", icon: "/assets/react.svg" },
         { name: "Next.js", icon: "/assets/next-js.svg" },
         { name: "Node.js", icon: "/assets/nodejs.svg" },
-        { name: "MongoDB", icon: "/assets/mongoDB.svg" },
+        { name: "MongoDB", icon: "/assets/mongodb.svg" },
     ];
 
     const languages = [
