@@ -26,17 +26,24 @@ export default function EducationSection() {
                 <div className="formacao_content">
                     {education.map((item) => (
                         <div key={item.title} className="formacao_item">
-                            <Image
-                                src={item.img}
-                                alt={item.title}
-                                width={390}
-                                height={200}
-                            />
-                            <h3>{item.title}</h3>
-                            {item.courses.map((c, i) => (
-                                <p key={i}>{c}</p>
-                            ))}
-                            <p>{item.years}</p>
+                            <div className="formacao_card">
+                                <Image
+                                    src={item.img}
+                                    alt={item.title}
+                                    width={390}
+                                    height={200}
+                                    className="formacao_img"
+                                />
+                                <div className="formacao_text">
+                                    <h3 className="formacao_titulo">{item.title}</h3>
+                                    {item.courses.map((course, i) => (
+                                        <p key={i} className="formacao_curso">
+                                            {course}
+                                        </p>
+                                    ))}
+                                    <p className="formacao_anos">{item.years}</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>

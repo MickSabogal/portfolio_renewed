@@ -32,15 +32,20 @@ export default function ExperienceSection() {
                 <div className="experiencia_content">
                     {experience.map((exp) => (
                         <div key={exp.company} className="experiencia_item">
-                            <Image
-                                src={exp.img}
-                                alt={exp.company}
-                                width={390}
-                                height={200}
-                            />
-                            <h3>{exp.company}</h3>
-                            <p>{exp.role}</p>
-                            <p>{exp.years}</p>
+                            <div className="experiencia_card">
+                                <Image
+                                    src={exp.img}
+                                    alt={exp.company}
+                                    width={390}
+                                    height={200}
+                                    className="experiencia_img"
+                                />
+                                <div className="experiencia_text">
+                                    <h3 className="experiencia_empresa">{exp.company}</h3>
+                                    <p className="experiencia_cargo">{exp.role}</p>
+                                    <p className="experiencia_anos">{exp.years}</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
