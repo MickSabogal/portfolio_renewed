@@ -44,6 +44,13 @@ export default function ProjectsSection() {
             desc: "Desenho feito com CSS Grid e Flexbox",
             url: "https://micksabogal.github.io/web_development_projects/10.3%20Mondrian%20Project/",
         },
+        {
+            id: 7,
+            img: "/assets/Projeto7.png",
+            title: "Spotidados",
+            desc: "Aplicativo enteiro baseado no Spotify feito com React",
+            url: "https://spotidados-app-vercel.vercel.app/"
+        }
     ];
 
     return (

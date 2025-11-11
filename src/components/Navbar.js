@@ -1,33 +1,50 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const handleToggle = () => {
+        setMenuOpen(!menuOpen);
+    };  
+
+    const handleLinkClick = () => {
+        setMenuOpen(false); 
+    };
+
     return (
         <header className="header-nav">
             <nav className="menu-container">
-                {/* Botón hamburguesa */}
                 <button
                     className={`menu-toggle ${menuOpen ? "open" : ""}`}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Abrir menú"
+                    onClick={handleToggle}
+                    aria-label="Toggle menu"
                 >
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
 
-                {/* Menú de enlaces */}
+                {/* Menú principal */}
                 <div className={`menu ${menuOpen ? "active" : ""}`}>
-                    <Link href="#inicio">Início</Link>
-                    <Link href="#sobre">Sobre mim</Link>
-                    <Link href="#habilidades">Habilidades</Link>
-                    <Link href="#projetos">Projetos</Link>
-                    <Link href="#formacao">Formação</Link>
-                    <Link href="#experiencia">Experiência</Link>
-                    <Link href="#contactos">Contactos</Link>
+                    <a href="#about" onClick={handleLinkClick}>
+                        Sobre mim
+                    </a>
+                    <a href="#habilidades" onClick={handleLinkClick}>
+                        Habilidades
+                    </a>
+                    <a href="#projetos" onClick={handleLinkClick}>
+                        Projetos
+                    </a>
+                    <a href="#formacao" onClick={handleLinkClick}>
+                        Formação
+                    </a>
+                    <a href="#experiencia" onClick={handleLinkClick}>
+                        Experiência
+                    </a>
+                    <a href="#contactos" onClick={handleLinkClick}>
+                        Contatos
+                    </a>
                 </div>
             </nav>
         </header>
