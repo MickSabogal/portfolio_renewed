@@ -49,7 +49,21 @@ export default function ProjectsSection() {
             img: "/assets/Projeto7.png",
             title: "Spotidados",
             desc: "Aplicativo enteiro baseado no Spotify feito com React",
-            url: "https://spotidados-app-vercel.vercel.app/"
+            url: "https://spotidados-app-vercel.vercel.app/",
+        },
+        {
+            id: 8,
+            img: "/assets/Projeto8.png",
+            title: "Planta Aqui",
+            desc: "Aplicativo para criar comunidades que queram cuidar do meio ambiente",
+            url: "https://planta-aqui.vercel.app/",
+        },
+        {
+            id: 9,
+            img: "/assets/Projeto9.png",
+            title: "DevRats",
+            desc: "Do you know GymRats? This is DevRats, Check it out!",
+            url: "https://devrats.vercel.app/login",
         }
     ];
 
