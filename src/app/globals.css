@@ -529,14 +529,17 @@ section {
 
 .flip-card-back {
   background: #21285c;
-  color: #ffc71e;
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   font-family: "Pixelify Sans", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+.flip-card-back p {
+  color: #ffc71e;
 }
 
 /* ===== FORMAÇÃO ===== */
