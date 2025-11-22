@@ -1,49 +1,41 @@
+"use client";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ExperienceSection() {
-    const experience = [
-        {
-            img: "/assets/foundever_logo.jpg",
-            company: "Foundever Portugal",
-            role: "Agente de Call Center",
-            years: "Presente",
-        },
-        {
-            img: "/assets/linde_logo.png",
-            company: "Linde Portugal",
-            role: "Agente de Call Center",
-            years: "2023 - 2024",
-        },
-        {
-            img: "/assets/foundever_logo.jpg",
-            company: "Foundever Colombia",
-            role: "Agente de Call Center",
-            years: "2021 - 2023",
-        },
-    ];
+    const { t } = useLanguage();
 
     return (
         <section id="experiencia" className="experiencia">
             <div className="center-wrap">
                 <div className="experiencia_header">
-                    <h2 className="experiencia_title">Experiência</h2>
+                    <h2 className="experiencia_title">{t.experience.title}</h2>
                 </div>
 
                 <div className="experiencia_content">
-                    {experience.map((exp) => (
-                        <div key={exp.company} className="experiencia_item">
+                    {t.experience.list.map((exp, index) => (
+                        <div key={index} className="experiencia_item">
                             <div className="experiencia_card">
                                 <Image
-                                    src={exp.img}
+                                    src={exp.img ?? "/assets/default_exp.png"}
                                     alt={exp.company}
                                     width={390}
                                     height={200}
                                     className="experiencia_img"
                                 />
+
                                 <div className="experiencia_text">
                                     <h3 className="experiencia_empresa">{exp.company}</h3>
-                                    <p className="experiencia_cargo">{exp.role}</p>
-                                    <p className="experiencia_anos">{exp.years}</p>
+                                    <p className="experiencia_cargo">
+                                        {t.experience.role}
+                                    </p>
+                                    <p className="experiencia_anos">
+                                        {exp.years === "Presente" ||
+                                            exp.years === "Present" ||
+                                            exp.years === "Presente"
+                                            ? t.experience.present
+                                            : exp.years}
+                                    </p>
                                 </div>
                             </div>
                         </div>

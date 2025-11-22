@@ -1,16 +1,23 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function IntroSection() {
+    const { t } = useLanguage();
+
     return (
         <section id="intro" className="intro">
             <Image
                 src="/assets/intro.png"
-                alt="Fundo"
+                alt="Background"
                 fill
                 priority
                 className="intro_image"
             />
-            <h1 className="intro_title">&lt; Olá o meu nome é Miguel &gt;</h1>
+
+            {/* TÍTULO TRADUCIBLE */}
+            <h1 className="intro_title">{t.intro.greeting}</h1>
 
             <Image
                 src="/assets/my_pic.png"
@@ -20,12 +27,13 @@ export default function IntroSection() {
                 className="memoji"
             />
 
+            {/* BOTÓN TRADUCIBLE */}
             <a
                 href="/assets/CV_Updated.pdf"
                 download
                 className="button"
             >
-                Descarregar o meu CV
+                {t.intro.downloadCV}
             </a>
         </section>
     );

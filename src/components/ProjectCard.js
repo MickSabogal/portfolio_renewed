@@ -1,6 +1,13 @@
+"use client";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
-export default function ProjectCard({ img, title, desc, url }) {
+export default function ProjectCard({ id, img, url }) {
+    const { t } = useLanguage();
+
+    // Obtemos la traducción del projeto baseado no ID
+    const project = t.projects.list[id - 1];
+
     return (
         <div className="projeto">
             <div className="flip-card">
@@ -8,14 +15,15 @@ export default function ProjectCard({ img, title, desc, url }) {
                     <div className="flip-card-front">
                         <Image
                             src={img}
-                            alt={title}
+                            alt={project.title}
                             width={300}
                             height={200}
                             className="rounded-xl object-cover"
                         />
                     </div>
+
                     <div className="flip-card-back">
-                        <p>{desc}</p>
+                        <p>{project.desc}</p>
                     </div>
                 </div>
             </div>
@@ -23,10 +31,10 @@ export default function ProjectCard({ img, title, desc, url }) {
             <h3>
                 {url ? (
                     <a href={url} target="_blank" rel="noopener noreferrer">
-                        {title}
+                        {project.title}
                     </a>
                 ) : (
-                    title
+                    project.title
                 )}
             </h3>
         </div>

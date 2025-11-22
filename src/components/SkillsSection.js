@@ -24,12 +24,15 @@ export default function SkillsSection() {
     return (
         <section id="habilidades" className="habilidades">
             <div className="center-wrap">
+                {/* TÍTULO */}
                 <div className="habilidades_header">
                     <h2 className="habilidades_title">{t.skills.title}</h2>
                 </div>
 
+                {/* SUBTÍTULO */}
                 <p>{t.skills.subtitle}</p>
 
+                {/* HABILIDADES TÉCNICAS */}
                 <div className="tecnologias">
                     {skills.map((tech) => (
                         <div key={tech.name} className="habilidades_icons">
@@ -44,11 +47,12 @@ export default function SkillsSection() {
                     ))}
                 </div>
 
+                {/* IDIOMAS */}
                 <p>{t.skills.languages}</p>
 
                 <div className="idiomas">
                     {languages.map((lang) => (
-                        <div key={lang.name}>
+                        <div key={lang.name} className="idioma_item">
                             <Image
                                 src={lang.flag}
                                 alt={lang.name}

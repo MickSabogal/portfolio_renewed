@@ -1,6 +1,7 @@
 // src/translations/translations.js
 
 export const translations = {
+    // 🇵🇹 PORTUGUÊS (default)
     pt: {
         nav: {
             about: "Sobre mim",
@@ -32,15 +33,51 @@ export const translations = {
         projects: {
             title: "Projetos",
             list: [
-                { title: "TinDog", desc: "Landing page para pets feita com Bootstrap" },
-                { title: "Museum of Candy", desc: "Landing page básica feita para aprender CSS" },
-                { title: "Agência de Design", desc: "Landing page feita para aprender Float" },
-                { title: "Photoblog", desc: "Landing page para um photoblog" },
-                { title: "Portfólio básico", desc: "Meu primeiro portfólio feito com HTML e CSS" },
-                { title: "Obra de arte", desc: "Desenho feito com CSS Grid e Flexbox" },
-                { title: "Spotidados", desc: "Aplicação completa baseada no Spotify feita com React" },
-                { title: "Planta Aqui", desc: "Aplicação para criar comunidades que cuidam do meio ambiente" },
-                { title: "DevRats", desc: "Você conhece GymRats? Isto é DevRats, confira!" }
+                {
+                    title: "TinDog",
+                    desc: "Landing page para pets feita com Bootstrap",
+                    url: "https://micksabogal.github.io/web_development_projects/11.3%20TinDog%20Project/"
+                },
+                {
+                    title: "Museum of Candy",
+                    desc: "Landing page básica feita para aprender CSS",
+                    url: "https://micksabogal.github.io/web_development_projects/Starter/"
+                },
+                {
+                    title: "Agência de Design",
+                    desc: "Landing page feita para aprender Float",
+                    url: "https://micksabogal.github.io/web_development_projects/8.4%20Web%20Design%20Agency%20Project/"
+                },
+                {
+                    title: "Photoblog",
+                    desc: "Landing page para um photoblog",
+                    url: "https://micksabogal.github.io/web_development_projects/PhotoBlog/"
+                },
+                {
+                    title: "Portfólio básico",
+                    desc: "Meu primeiro portfólio feito com HTML e CSS",
+                    url: "https://micksabogal.github.io/capstone_project/"
+                },
+                {
+                    title: "Obra de arte",
+                    desc: "Desenho feito com CSS Grid e Flexbox",
+                    url: "https://micksabogal.github.io/web_development_projects/10.3%20Mondrian%20Project/"
+                },
+                {
+                    title: "Spotidados",
+                    desc: "Aplicação completa baseada no Spotify feita com React",
+                    url: "https://spotidados-app-vercel.vercel.app/"
+                },
+                {
+                    title: "Planta Aqui",
+                    desc: "Aplicação para criar comunidades que cuidam do meio ambiente",
+                    url: "https://planta-aqui.vercel.app/"
+                },
+                {
+                    title: "DevRats",
+                    desc: "Você conhece GymRats? Isto é DevRats, confira!",
+                    url: "https://devrats.vercel.app/login"
+                }
             ]
         },
         education: {
@@ -96,7 +133,7 @@ export const translations = {
             contact: "Contactos"
         },
         intro: {
-            greeting: "< Hola mi nombre es Miguel >",
+            greeting: "< Hola, mi nombre es Miguel >",
             downloadCV: "Descargar mi CV"
         },
         about: {
@@ -117,15 +154,51 @@ export const translations = {
         projects: {
             title: "Proyectos",
             list: [
-                { title: "TinDog", desc: "Landing page para mascotas hecha con Bootstrap" },
-                { title: "Museum of Candy", desc: "Landing page básica hecha para aprender CSS" },
-                { title: "Agencia de Diseño", desc: "Landing page hecha para aprender Float" },
-                { title: "Photoblog", desc: "Landing page para un photoblog" },
-                { title: "Portafolio básico", desc: "Mi primer portafolio hecho con HTML y CSS" },
-                { title: "Obra de arte", desc: "Dibujo hecho con CSS Grid y Flexbox" },
-                { title: "Spotidados", desc: "Aplicación completa basada en Spotify hecha con React" },
-                { title: "Planta Aqui", desc: "Aplicación para comunidades que cuidan el medio ambiente" },
-                { title: "DevRats", desc: "¿Conoces GymRats? Esto es DevRats. ¡Échale un vistazo!" }
+                {
+                    title: "TinDog",
+                    desc: "Landing page para mascotas hecha con Bootstrap",
+                    url: "https://micksabogal.github.io/web_development_projects/11.3%20TinDog%20Project/"
+                },
+                {
+                    title: "Museum of Candy",
+                    desc: "Landing page básica hecha para aprender CSS",
+                    url: "https://micksabogal.github.io/web_development_projects/Starter/"
+                },
+                {
+                    title: "Agencia de Diseño",
+                    desc: "Landing page hecha para aprender Float",
+                    url: "https://micksabogal.github.io/web_development_projects/8.4%20Web%20Design%20Agency%20Project/"
+                },
+                {
+                    title: "Photoblog",
+                    desc: "Landing page para un photoblog",
+                    url: "https://micksabogal.github.io/web_development_projects/PhotoBlog/"
+                },
+                {
+                    title: "Portafolio básico",
+                    desc: "Mi primer portafolio hecho con HTML y CSS",
+                    url: "https://micksabogal.github.io/capstone_project/"
+                },
+                {
+                    title: "Obra de arte",
+                    desc: "Dibujo hecho con CSS Grid y Flexbox",
+                    url: "https://micksabogal.github.io/web_development_projects/10.3%20Mondrian%20Project/"
+                },
+                {
+                    title: "Spotidados",
+                    desc: "Aplicación completa basada en Spotify hecha con React",
+                    url: "https://spotidados-app-vercel.vercel.app/"
+                },
+                {
+                    title: "Planta Aqui",
+                    desc: "Aplicación para comunidades que cuidan el medio ambiente",
+                    url: "https://planta-aqui.vercel.app/"
+                },
+                {
+                    title: "DevRats",
+                    desc: "¿Conoces GymRats? Esto es DevRats. ¡Échale un vistazo!",
+                    url: "https://devrats.vercel.app/login"
+                }
             ]
         },
         education: {
@@ -181,7 +254,7 @@ export const translations = {
             contact: "Contact"
         },
         intro: {
-            greeting: "< Hello my name is Miguel >",
+            greeting: "< Hello, my name is Miguel >",
             downloadCV: "Download my CV"
         },
         about: {
@@ -202,15 +275,51 @@ export const translations = {
         projects: {
             title: "Projects",
             list: [
-                { title: "TinDog", desc: "Landing page for pets made with Bootstrap" },
-                { title: "Museum of Candy", desc: "Basic landing page made to learn CSS" },
-                { title: "Design Agency", desc: "Landing page made to learn Float" },
-                { title: "Photoblog", desc: "Landing page for a photoblog" },
-                { title: "Basic Portfolio", desc: "My first portfolio made with HTML and CSS" },
-                { title: "Artwork", desc: "Drawing made with CSS Grid and Flexbox" },
-                { title: "Spotidados", desc: "Full application based on Spotify made with React" },
-                { title: "Planta Aqui", desc: "Application to create communities that want to care for the environment" },
-                { title: "DevRats", desc: "Do you know GymRats? This is DevRats, check it out!" }
+                {
+                    title: "TinDog",
+                    desc: "Landing page for pets made with Bootstrap",
+                    url: "https://micksabogal.github.io/web_development_projects/11.3%20TinDog%20Project/"
+                },
+                {
+                    title: "Museum of Candy",
+                    desc: "Basic landing page made to learn CSS",
+                    url: "https://micksabogal.github.io/web_development_projects/Starter/"
+                },
+                {
+                    title: "Design Agency",
+                    desc: "Landing page made to learn Float",
+                    url: "https://micksabogal.github.io/web_development_projects/8.4%20Web%20Design%20Agency%20Project/"
+                },
+                {
+                    title: "Photoblog",
+                    desc: "Landing page for a photoblog",
+                    url: "https://micksabogal.github.io/web_development_projects/PhotoBlog/"
+                },
+                {
+                    title: "Basic Portfolio",
+                    desc: "My first portfolio made with HTML and CSS",
+                    url: "https://micksabogal.github.io/capstone_project/"
+                },
+                {
+                    title: "Artwork",
+                    desc: "Drawing made with CSS Grid and Flexbox",
+                    url: "https://micksabogal.github.io/web_development_projects/10.3%20Mondrian%20Project/"
+                },
+                {
+                    title: "Spotidados",
+                    desc: "Full Spotify-like app made with React",
+                    url: "https://spotidados-app-vercel.vercel.app/"
+                },
+                {
+                    title: "Planta Aqui",
+                    desc: "App to build communities that protect the environment",
+                    url: "https://planta-aqui.vercel.app/"
+                },
+                {
+                    title: "DevRats",
+                    desc: "Do you know GymRats? This is DevRats — check it out!",
+                    url: "https://devrats.vercel.app/login"
+                }
             ]
         },
         education: {
