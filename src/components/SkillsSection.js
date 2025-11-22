@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function SkillsSection() {
+    const { t } = useLanguage();
+
     const skills = [
         { name: "HTML", icon: "/assets/html5.svg" },
         { name: "CSS", icon: "/assets/css3.svg" },
@@ -12,19 +16,19 @@ export default function SkillsSection() {
     ];
 
     const languages = [
-        { name: "Inglês", flag: "/assets/us_flag.png" },
-        { name: "Português", flag: "/assets/portugal_flag.png" },
-        { name: "Espanhol", flag: "/assets/spain_flag.png" },
+        { name: t.skills.languageList.english, flag: "/assets/us_flag.png" },
+        { name: t.skills.languageList.portuguese, flag: "/assets/portugal_flag.png" },
+        { name: t.skills.languageList.spanish, flag: "/assets/spain_flag.png" },
     ];
 
     return (
         <section id="habilidades" className="habilidades">
             <div className="center-wrap">
                 <div className="habilidades_header">
-                    <h2 className="habilidades_title">Habilidades</h2>
+                    <h2 className="habilidades_title">{t.skills.title}</h2>
                 </div>
 
-                <p>Estas são as minhas habilidades até agora</p>
+                <p>{t.skills.subtitle}</p>
 
                 <div className="tecnologias">
                     {skills.map((tech) => (
@@ -40,7 +44,7 @@ export default function SkillsSection() {
                     ))}
                 </div>
 
-                <p>Idiomas</p>
+                <p>{t.skills.languages}</p>
 
                 <div className="idiomas">
                     {languages.map((lang) => (
