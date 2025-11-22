@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactSection() {
+    const { t } = useLanguage();
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState("");
 
@@ -27,14 +29,14 @@ export default function ContactSection() {
             const data = await res.json();
 
             if (data.success) {
-                setStatus("✅ Mensagem enviada com sucesso!");
+                setStatus(t.contact.successMessage);
                 e.target.reset();
             } else {
-                setStatus("❌ Erro ao enviar a mensagem. Tente novamente.");
+                setStatus(t.contact.errorMessage);
             }
         } catch (err) {
             console.error(err);
-            setStatus("⚠️ Erro de conexão. Verifique sua internet.");
+            setStatus(t.contact.connectionError);
         } finally {
             setLoading(false);
         }
@@ -43,21 +45,21 @@ export default function ContactSection() {
     return (
         <section id="contactos" className="contactos">
             <div className="center-wrap">
-                <h2 className="contactos_title">Envia-me uma mensagem</h2>
+                <h2 className="contactos_title">{t.contact.title}</h2>
 
                 <div className="contactos_content">
                     <form className="contactos_form" onSubmit={handleSubmit}>
-                        <label>Nome</label>
+                        <label>{t.contact.name}</label>
                         <input type="text" name="name" required />
 
-                        <label>Email</label>
+                        <label>{t.contact.email}</label>
                         <input type="email" name="email" required />
 
-                        <label>Mensagem</label>
+                        <label>{t.contact.message}</label>
                         <textarea name="message" required />
 
                         <button type="submit" disabled={loading}>
-                            {loading ? "Enviando..." : "Enviar"}
+                            {loading ? t.contact.sending : t.contact.send}
                         </button>
 
                         {status && (
@@ -70,12 +72,14 @@ export default function ContactSection() {
                     <a href="https://github.com/MickSabogal" target="_blank">
                         <Image src="/assets/github.svg" alt="GitHub" width={85} height={85} />
                     </a>
+
                     <a
                         href="https://www.linkedin.com/in/miguel-alejandro-sabogal-guzman/"
                         target="_blank"
                     >
                         <Image src="/assets/linkedin.svg" alt="LinkedIn" width={85} height={85} />
                     </a>
+
                     <a href="mailto:miguelsabogal666@icloud.com">
                         <Image src="/assets/envelope.svg" alt="Email" width={85} height={85} />
                     </a>
