@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Raleway, Silkscreen, Pixelify_Sans } from "next/font/google";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const raleway = Raleway({ subsets: ["latin"], variable: "--font-raleway" });
 const silkscreen = Silkscreen({
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${raleway.variable} ${silkscreen.variable} ${pixelify.variable} bg-[#0f122b] text-white overflow-x-hidden`}
       >
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
