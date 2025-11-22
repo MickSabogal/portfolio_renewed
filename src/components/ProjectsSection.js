@@ -19,8 +19,7 @@ export default function ProjectsSection() {
                     {projects.map((p, index) => (
                         <ProjectCard
                             key={index}
-                            id={index}
-                            img={`/assets/Projeto${index + 1}.png`} // ✔ usa tus imágenes numeradas
+                            img={`/assets/Projeto${index + 1}.png`}
                             title={p.title}
                             desc={p.desc}
                             url={p.url}

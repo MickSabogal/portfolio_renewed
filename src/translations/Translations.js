@@ -84,11 +84,13 @@ export const translations = {
             title: "Formação",
             list: [
                 {
+                    img: "/assets/indoamericana.png",
                     title: "Corporación Educativa Indoamericana",
                     courses: ["Despachante de Aeronaves", "Logística Aeroportuária"],
                     years: "2018 - 2020"
                 },
                 {
+                    img: "/assets/mayeutico.png",
                     title: "Instituto Mayeutico",
                     courses: ["Ensino Secundário"],
                     years: "2013 - 2017"
@@ -97,12 +99,25 @@ export const translations = {
         },
         experience: {
             title: "Experiência",
-            role: "Agente de Call Center",
-            present: "Presente",
             list: [
-                { company: "Foundever Portugal", years: "Presente" },
-                { company: "Linde Portugal", years: "2023 - 2024" },
-                { company: "Foundever Colombia", years: "2021 - 2023" }
+                {
+                    img: "/assets/foundever_logo.jpg",
+                    company: "Foundever Portugal",
+                    role: "Agente de Call Center",
+                    years: "2025 - Presente"
+                },
+                {
+                    img: "/assets/linde_logo.png",
+                    company: "Linde Portugal",
+                    role: "Agente de Call Center",
+                    years: "2023 - 2024"
+                },
+                {
+                    img: "/assets/foundever_logo.jpg",
+                    company: "Foundever Colombia",
+                    role: "Agente de Call Center",
+                    years: "2021 - 2023"
+                }
             ]
         },
         contact: {
@@ -205,11 +220,13 @@ export const translations = {
             title: "Formación",
             list: [
                 {
+                    img: "/assets/indoamericana.png",
                     title: "Corporación Educativa Indoamericana",
                     courses: ["Despachante de Aeronaves", "Logística Aeroportuaria"],
                     years: "2018 - 2020"
                 },
                 {
+                    img: "/assets/mayeutico.png",
                     title: "Instituto Mayeutico",
                     courses: ["Enseñanza Secundaria"],
                     years: "2013 - 2017"
@@ -218,12 +235,25 @@ export const translations = {
         },
         experience: {
             title: "Experiencia",
-            role: "Agente de Call Center",
-            present: "Presente",
             list: [
-                { company: "Foundever Portugal", years: "Presente" },
-                { company: "Linde Portugal", years: "2023 - 2024" },
-                { company: "Foundever Colombia", years: "2021 - 2023" }
+                {
+                    img: "/assets/foundever_logo.jpg",
+                    company: "Foundever Portugal",
+                    role: "Agente de Call Center",
+                    years: "2025 - Presente"
+                },
+                {
+                    img: "/assets/linde_logo.png",
+                    company: "Linde Portugal",
+                    role: "Agente de Call Center",
+                    years: "2023 - 2024"
+                },
+                {
+                    img: "/assets/foundever_logo.jpg",
+                    company: "Foundever Colombia",
+                    role: "Agente de Call Center",
+                    years: "2021 - 2023"
+                }
             ]
         },
         contact: {
@@ -326,11 +356,13 @@ export const translations = {
             title: "Education",
             list: [
                 {
+                    img: "/assets/indoamericana.png",
                     title: "Corporación Educativa Indoamericana",
                     courses: ["Aircraft Dispatcher", "Airport Logistics"],
                     years: "2018 - 2020"
                 },
                 {
+                    img: "/assets/mayeutico.png",
                     title: "Instituto Mayeutico",
                     courses: ["Secondary Education"],
                     years: "2013 - 2017"
@@ -339,12 +371,25 @@ export const translations = {
         },
         experience: {
             title: "Experience",
-            role: "Call Center Agent",
-            present: "Present",
             list: [
-                { company: "Foundever Portugal", years: "Present" },
-                { company: "Linde Portugal", years: "2023 - 2024" },
-                { company: "Foundever Colombia", years: "2021 - 2023" }
+                {
+                    img: "/assets/foundever_logo.jpg",
+                    company: "Foundever Portugal",
+                    role: "Call Center Agent",
+                    years: "2025 - Present"
+                },
+                {
+                    img: "/assets/linde_logo.png",
+                    company: "Linde Portugal",
+                    role: "Call Center Agent",
+                    years: "2023 - 2024"
+                },
+                {
+                    img: "/assets/foundever_logo.jpg",
+                    company: "Foundever Colombia",
+                    role: "Call Center Agent",
+                    years: "2021 - 2023"
+                }
             ]
         },
         contact: {
