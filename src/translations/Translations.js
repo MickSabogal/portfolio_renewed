@@ -18,7 +18,7 @@ export const translations = {
         about: {
             title: "Sobre Mim",
             description:
-                "Sou Miguel, estudante de desenvolvimento web full-stack, aprendendo HTML, CSS e JavaScript. Em breve, explorarei Python e desenvolvimento backend. Com experiência em call center, trabalhei com ferramentas como Citrix e Salesforce, onde atuei como tester, adquirindo uma visão prática dessas plataformas. Também tenho interesse em aprender AWS e soluções em cloud. Minha paixão por tecnologia e vontade de evoluir são o que me motivam a continuar crescendo como profissional."
+                "Sou Miguel, estudante de desenvolvimento web full-stack, aprendendo HTML, CSS e JavaScript. Em breve, explorarei Python e mais outras tecnologias. Com experiência em call center, trabalhei com ferramentas como Citrix e Salesforce, onde atuei como tester, adquirindo uma visão prática dessas plataformas. Também tenho interesse em aprender AWS e soluções em cloud. Minha paixão por tecnologia e vontade de evoluir são o que me motivam a continuar crescendo como profissional."
         },
         skills: {
             title: "Habilidades",
@@ -154,7 +154,7 @@ export const translations = {
         about: {
             title: "Sobre Mí",
             description:
-                "Soy Miguel, estudiante de desarrollo web full-stack, aprendiendo HTML, CSS y JavaScript. Próximamente, exploraré Python y el desarrollo backend. Con experiencia en call center, trabajé con herramientas como Citrix y Salesforce, donde fui tester, adquiriendo una visión práctica de estas plataformas. También tengo interés en aprender AWS y soluciones en cloud. Mi pasión por la tecnología y las ganas de evolucionar son lo que me motivan a seguir creciendo como profesional."
+                "Soy Miguel, estudiante de desarrollo web full-stack, aprendiendo HTML, CSS y JavaScript. Próximamente, exploraré Python y otras tecnologías. Con experiencia en call center, trabajé con herramientas como Citrix y Salesforce, donde fui tester, adquiriendo una visión práctica de estas plataformas. También tengo interés en aprender AWS y soluciones en cloud. Mi pasión por la tecnología y las ganas de evolucionar son lo que me motivan a seguir creciendo como profesional."
         },
         skills: {
             title: "Habilidades",
@@ -290,7 +290,7 @@ export const translations = {
         about: {
             title: "About Me",
             description:
-                "I'm Miguel, a full-stack web development student, learning HTML, CSS, and JavaScript. Soon, I will explore Python and backend development. With call center experience, I worked with tools like Citrix and Salesforce, where I was a tester, gaining practical insight into these platforms. I'm also interested in learning AWS and cloud solutions. My passion for technology and desire to evolve are what motivate me to continue growing as a professional."
+                "I'm Miguel, a full-stack web development student, learning HTML, CSS, and JavaScript. Soon, I will explore Python and other technologies. With call center experience, I worked with tools like Citrix and Salesforce, where I was a tester, gaining practical insight into these platforms. I'm also interested in learning AWS and cloud solutions. My passion for technology and desire to evolve are what motivate me to continue growing as a professional."
         },
         skills: {
             title: "Skills",

@@ -15,10 +15,7 @@ export default function IntroSection() {
                 priority
                 className="intro_image"
             />
-
-            {/* TÍTULO TRADUCIBLE */}
             <h1 className="intro_title">{t.intro.greeting}</h1>
-
             <Image
                 src="/assets/my_pic.png"
                 alt="Memoji"
@@ -26,10 +23,8 @@ export default function IntroSection() {
                 height={300}
                 className="memoji"
             />
-
-            {/* BOTÓN TRADUCIBLE */}
             <a
-                href="/assets/CV_Updated.pdf"
+                href="/assets/CV Junior.pdf"
                 download
                 className="button"
             >
