@@ -2,15 +2,18 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useEffect } from "react";
 
-// React Icons para banderas
+// React Icons
 import { FaFlagUsa } from "react-icons/fa";
 import { GiSpain, GiPortugal } from "react-icons/gi";
 
 export default function LanguageSwitcher() {
     const { language, changeLanguage } = useLanguage();
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
 
+    // ⚠ Inicialmente null para evitar SSR mismatch
+    const [isMobile, setIsMobile] = useState(null);
+    const [isOpen, setIsOpen] = useState(false);
+
+    // Detectar si es mobile SOLO en el cliente
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth <= 1023);
         checkMobile();
@@ -18,7 +21,9 @@ export default function LanguageSwitcher() {
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
-    // Idiomas con íconos correctos
+    // Evitar render SSR hasta saber si es mobile
+    if (isMobile === null) return null;
+
     const languages = [
         { code: "pt", name: "Português", icon: GiPortugal },
         { code: "es", name: "Español", icon: GiSpain },
@@ -26,7 +31,7 @@ export default function LanguageSwitcher() {
     ];
 
     const currentLanguage =
-        languages.find((l) => l.code === language) || languages[0];
+        languages.find(l => l.code === language) || languages[0];
 
     return (
         <div style={{ position: "relative", zIndex: 1001 }}>
@@ -52,7 +57,6 @@ export default function LanguageSwitcher() {
                 })()}
             </button>
 
-            {/* Modal con los idiomas */}
             {isOpen && (
                 <div
                     style={{
@@ -98,7 +102,7 @@ export default function LanguageSwitcher() {
                             >
                                 <Icon
                                     size={22}
-                                    color={active ? "#000" : "#ffc71e"} // ← 🔥 ICONO NEGRO SI ESTÁ ACTIVO
+                                    color={active ? "#000" : "#ffc71e"}
                                 />
                                 <span>{lang.name}</span>
                             </button>
